@@ -6,6 +6,7 @@ class MergeSort {
 		List myList = [8,3,4,2,5,6,1,7,9,0]
 		List sorted = sort(myList)
 		
+		System.out.println(sorted == myList.sort());
 		assert sorted == myList.sort()
 	}
 	
@@ -20,13 +21,13 @@ class MergeSort {
 		int i, j = 0
 		
 		for(int k = 0; k < someList.size(); k++){
-			if(i == half || i == right.size()){
+			if(i == left.size()){
 				finalList.add(k, right.get(j))
 				j++
 				continue
 			}
 			
-			if(j == half || j == left.size()){
+			if(j == right.size()){
 				finalList.add(k, left.get(i))
 				i++
 				continue
